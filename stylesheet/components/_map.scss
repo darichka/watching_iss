@@ -1,0 +1,24 @@
+$map-color-border: $color-light;
+$map-min-height: 400px;
+$map-margin: 1rem;
+
+%map{
+    min-height: $map-min-height;
+    margin-bottom: $map-margin;
+    @media only screen and (max-width: $medium) {
+        margin: $map-margin;
+        margin-bottom: 0;
+	}
+}
+
+@mixin map-theme($color) {
+    color: $color;
+    border-color: $color;
+}
+
+.location__map{
+    @extend %iss-component;
+    @extend %map; 
+    @include map-theme($map-color-border);
+    @include iss-component-flex-basis($iss-component-flex-basis-wide)
+}

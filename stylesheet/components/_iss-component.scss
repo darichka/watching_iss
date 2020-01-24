@@ -1,0 +1,90 @@
+$iss-component-border-width: 1px;
+$font-size: type-scale(-1);
+$font-weight: 400;
+$line-height: 1.5rem;
+$iss-component-padding: 0.5rem;
+$iss-component-flex-basis-wide: 70%;
+$iss-component-flex-basis-narrow: 25%;
+$iss-component-margin: 1rem;
+
+$medium: 770px;
+
+@mixin iss-component-theme($color, $color-text-hover: $color-light) {
+    color: $color;
+    border-color: $color;
+    &:hover {
+        color: $color-text-hover;
+        background-color: $color;
+    }
+}
+
+@mixin iss-component-flex-basis($flex-basis){
+    flex-basis: 100%;
+    @media only screen and (min-width: $medium){
+        flex-basis: $flex-basis;
+    }
+}
+
+@mixin iss-component-margin ($margin){
+    margin: $margin 0;
+    @media only screen and (max-width: $medium) {
+        margin: $margin;
+        margin-bottom: 0;
+	}
+}
+
+@mixin iss-last-elem-margin($margin){
+    margin-bottom: $margin;
+    @media only screen and (max-width: $medium) {
+        margin: $margin;
+	}
+}
+
+%iss-component{
+    padding: $iss-component-padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border-width: $iss-component-border-width;
+    border-style: solid;
+    line-height: $line-height;
+    @media only screen and (max-width: $medium) {
+        width: 100%;
+	}
+}
+
+%astronauts-sub-blocks{
+    @media only screen and (max-width: $medium) {
+        width: auto;
+	}
+}
+
+.coordinates{
+    @extend %iss-component;
+    @include iss-component-theme($color-primary);
+    @include iss-component-flex-basis($iss-component-flex-basis-wide);
+    @include iss-component-margin($iss-component-margin);
+}
+
+.current-time{
+    @extend %iss-component;
+    @include iss-component-theme($color-primary);
+    @include iss-component-flex-basis($iss-component-flex-basis-narrow);
+    @include iss-component-margin($iss-component-margin);
+}
+
+.astronauts__total{
+    @extend %iss-component;
+    @include iss-component-theme($color-primary);
+    @extend %astronauts-sub-blocks;
+}
+
+.astronauts__list{
+    @extend %iss-component;
+    @extend %astronauts-sub-blocks;
+}
+
+.astronauts{
+    margin-bottom: $iss-component-margin;
+    @include iss-component-flex-basis($iss-component-flex-basis-narrow);
+    @include iss-last-elem-margin($iss-component-margin);
+}

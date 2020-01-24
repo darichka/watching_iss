@@ -1,0 +1,15 @@
+%iss-title{
+    font-weight: bold;
+}
+
+%iss-changed-data{
+    font-style: italic;
+}
+
+.coordinates__title, .current-time__title{
+    @extend %iss-title;
+}
+
+.current-time__date, .coordinates__lat-lng{
+    @extend %iss-changed-data;
+}

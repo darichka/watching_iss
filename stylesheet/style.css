@@ -1,0 +1,221 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.iss {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+}
+
+.location__map, .astronauts__list, .astronauts__total, .current-time, .coordinates {
+  padding: 0.5rem;
+  font-size: type-scale(-1);
+  font-weight: 400;
+  border-width: 1px;
+  border-style: solid;
+  line-height: 1.5rem;
+}
+@media only screen and (max-width: 770px) {
+  .location__map, .astronauts__list, .astronauts__total, .current-time, .coordinates {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .astronauts__list, .astronauts__total {
+    width: auto;
+  }
+}
+
+.coordinates {
+  color: #131313;
+  border-color: #131313;
+  flex-basis: 100%;
+  margin: 1rem 0;
+}
+.coordinates:hover {
+  color: #b7b7b7;
+  background-color: #131313;
+}
+@media only screen and (min-width: 770px) {
+  .coordinates {
+    flex-basis: 70%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .coordinates {
+    margin: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.current-time {
+  color: #131313;
+  border-color: #131313;
+  flex-basis: 100%;
+  margin: 1rem 0;
+}
+.current-time:hover {
+  color: #b7b7b7;
+  background-color: #131313;
+}
+@media only screen and (min-width: 770px) {
+  .current-time {
+    flex-basis: 25%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .current-time {
+    margin: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.astronauts__total {
+  color: #131313;
+  border-color: #131313;
+}
+.astronauts__total:hover {
+  color: #b7b7b7;
+  background-color: #131313;
+}
+
+.astronauts {
+  margin-bottom: 1rem;
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 770px) {
+  .astronauts {
+    flex-basis: 25%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .astronauts {
+    margin: 1rem;
+  }
+}
+
+.coordinates__title, .current-time__title {
+  font-weight: bold;
+}
+
+.current-time__date, .coordinates__lat-lng {
+  font-style: italic;
+}
+
+.location__map {
+  min-height: 400px;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 770px) {
+  .location__map {
+    margin: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.location__map {
+  color: #b7b7b7;
+  border-color: #b7b7b7;
+  flex-basis: 100%;
+}
+@media only screen and (min-width: 770px) {
+  .location__map {
+    flex-basis: 70%;
+  }
+}
+
+.astronaut {
+  padding: 0.5rem;
+  font-size: type-scale(-1);
+  font-weight: 400;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  line-height: 1.5rem;
+  min-height: 55px;
+  width: 100%;
+  overflow: hiddeh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.astronaut {
+  color: #131313;
+  border-color: #131313;
+  margin-bottom: 1rem;
+}
+.astronaut:hover {
+  color: #b7b7b7;
+  background-color: #131313;
+}
+
+.astronaut:last-child {
+  margin-bottom: 0;
+}
+
+.astr-img {
+  max-height: 45px;
+  max-width: 45px;
+  margin: 0 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

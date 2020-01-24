@@ -1,0 +1,13 @@
+$iss-list-item-img-size: 45px;
+$iss-list-item-img-margin: 5px;
+
+%img-list-item{
+    max-height: $iss-list-item-img-size;
+    max-width: $iss-list-item-img-size;
+    margin: 0 $iss-list-item-img-margin;
+}
+
+.astr-img{
+    @extend %img-list-item;
+}
+

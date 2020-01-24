@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Watching ISS</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css"/>
+	<!-- <link rel="SHORTCUT ICON" href="img/favicon.png" type="image/png"> -->
+</head>
+<body>
+	<main class="iss">
+		<div class="iss__coordinates coordinates">
+			<p class="coordinates__title">ISS is now located at: </p>
+			<p class="coordinates__lat-lng">
+				longitude: 
+				<span id="longitude"></span>
+				, latitude:
+				<span id="latitude"></span>
+			</p>
+		</div>
+		<div class="current-time">
+			<p class="current-time__title">Current UTC time: 
+				<span id="time"></span>
+			</p>
+			<p class="current-time__date" id="date"></p>
+		</div>
+		<div class="location__map map" id="map"></div>
+		<div class="astronauts" id="astronauts">
+			<ul class="astronauts__list"></ul>
+			<div class="astronauts__total">
+				<p> 
+					Total amount: 
+					<span id="astronauts-amount"></span>
+					people on ISS
+				</p>
+			</div>
+		</div>
+	</main>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1NpZCdIfKG35KrPonUZSoAzAAntCCkUE"></script>
+	<script defer src="js/common.js"></script>
+</body>
+</html>

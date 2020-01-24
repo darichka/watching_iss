@@ -1,0 +1,37 @@
+$list-item-height: 55px;
+$list-item-border-radius: 10px;
+$list-item-margin: $iss-component-margin;
+
+@mixin list-item-margin($margin){
+    margin-bottom: $margin;
+}
+
+%li{
+    padding: $iss-component-padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border-width: $iss-component-border-width;
+    border-style: solid;
+    border-radius: $list-item-border-radius;
+    line-height: $line-height;
+    min-height: $list-item-height;
+    width: 100%;
+    overflow: hiddeh;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.astronaut{
+    @extend %li;
+    @include iss-component-theme($color-primary);
+    @include list-item-margin($list-item-margin);
+}
+
+.astronaut:last-child{
+    margin-bottom: 0;
+}
